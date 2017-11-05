@@ -22,28 +22,50 @@
 
     <style type="text/css">
         .grid-stack {
-            background: lightgoldenrodyellow;
+            background: #F5EFE7;
         }
 
         .grid-stack-item-content {
             color: #2c3e50;
             text-align: center;
-            background-color: #18bc9c;
+/*            background-color: #18bc9c;*/
+			opacity: 0.8;
+			background: #FFFFFF;
+			box-shadow: 1px 1px 3px 0 rgba(107,81,0,0.05), 2px 2px 8px 0 rgba(107,81,0,0.03);
+			border-radius: 7px;
+			top: 10px;
+			
         }
+		/* Rectangle: */
 
         .grid-stack .grid-stack {
-            /*margin: 0 -10px;*/
+/*            margin: -10px -30px;*/
             background: rgba(255, 255, 255, 0.3);
+
+			
+			
         }
+		/* Rectangle 3: */
+		/* Line 5: */
 
         .grid-stack .grid-stack .grid-stack-item-content {
-            background: lightpink;
+            background: white;
+			box-shadow: none;
+			border-radius: 3px;
+			border: 1px solid #F5F2EB;
+			opacity: 1;
+			left: 5px;
+			right: 5px;
+			bottom: 5px;
+			top: 5px;
         }
     </style>
 </head>
 <body>
     <div class="container-fluid">
         <h1>Nested grids demo</h1>
+		
+		
 
         <div class="grid-stack">
             <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="4" data-gs-height="3">
@@ -51,17 +73,18 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eius eligendi eos fuga magnam numquam perferendis provident quos rem. Asperiores assumenda dolor error eveniet impedit nihil numquam provident repellat ullam.
                 </div>
             </div>
-            <div class="grid-stack-item" data-gs-x="4" data-gs-y="0" data-gs-width="4" data-gs-height="4">
+            <div class="grid-stack-item" data-gs-x="4" data-gs-y="0" data-gs-width="4" data-gs-height="10">
                 <div class="grid-stack-item-content">
 
                         <div class="grid-stack">
-                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="3" data-gs-height="1"><div class="grid-stack-item-content">1</div></div>
-                            <div class="grid-stack-item" data-gs-x="3" data-gs-y="0" data-gs-width="3" data-gs-height="1"><div class="grid-stack-item-content">2</div></div>
-                            <div class="grid-stack-item" data-gs-x="6" data-gs-y="0" data-gs-width="3" data-gs-height="1"><div class="grid-stack-item-content">3</div></div>
-                            <div class="grid-stack-item" data-gs-x="9" data-gs-y="0" data-gs-width="3" data-gs-height="1"><div class="grid-stack-item-content">4</div></div>
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="3" data-gs-height="2"><div class="grid-stack-item-content"><img src="a1.png" width="80" height="49"align="left"></div></div>
+                            <div class="grid-stack-item" data-gs-x="3" data-gs-y="0" data-gs-width="3" data-gs-height="2"><div class="grid-stack-item-content"><img src="a1.png" width="80" height="49"align="left"></div></div>
+                            <div class="grid-stack-item" data-gs-x="6" data-gs-y="0" data-gs-width="5" data-gs-height="3"><div class="grid-stack-item-content">
+								<img src="a2.png" width="156" height="75"align="left"></div></div>
+                            <div class="grid-stack-item" data-gs-x="9" data-gs-y="6" data-gs-width="3" data-gs-height="2"><div class="grid-stack-item-content">4</div></div>
 
-                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="1" data-gs-width="3" data-gs-height="1"><div class="grid-stack-item-content">5</div></div>
-                            <div class="grid-stack-item" data-gs-x="3" data-gs-y="1" data-gs-width="3" data-gs-height="1"><div class="grid-stack-item-content">6</div></div>
+                            <div class="grid-stack-item" data-gs-x="0" data-gs-y="1" data-gs-width="4" data-gs-height="2"><div class="grid-stack-item-content"><img src="a3.png" width="100" height="45"align="left"></div></div>
+                            <div class="grid-stack-item" data-gs-x="4" data-gs-y="1" data-gs-width="6" data-gs-height="2"><div class="grid-stack-item-content"><img src="a4.png" width="226" height="43"align="left"></div></div>
                         </div>
 
                 </div>
@@ -73,8 +96,14 @@
     <script type="text/javascript">
         $(function () {
             var options = {
+				cellHeight: 15,
+				verticalMargin: 0,
+				float: true
+
+
             };
             $('.grid-stack').gridstack(options);
+
         });
     </script>
 </body>
